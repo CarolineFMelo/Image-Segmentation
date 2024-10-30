@@ -2,13 +2,13 @@ import cv2
 import numpy as np
 
 # carrega a imagem
-img = cv2.imread('cores/testecor.jpg')
+img = cv2.imread('imagem_exemplo.jpeg')
 
 # converte a imagem da escala RGB para HSV
 img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
 # remove ruídos
-img_blur = cv2.medianBlur(img_hsv, 7)
+img_blur = cv2.medianBlur(img_hsv, 10)
 
 # define os limites superior e inferior de cor
 inferior = np.array([33, 137, 50])
